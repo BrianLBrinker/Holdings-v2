@@ -9,13 +9,9 @@ export interface RawHolding {
     EffectiveDate: string;
 }
 
-export interface Holding {
-    AccountName: string;
-    SecurityName: string;
-    SecurityCUSIP: string;
+export interface Holding extends Omit<RawHolding, 'Quantity' | 'FaceValue' | 'MarketValue' | 'UnrealizedGainLoss'> {
     Quantity: number;
     FaceValue: number;
     MarketValue: number;
     UnrealizedGainLoss: number;
-    EffectiveDate: string;
 }
