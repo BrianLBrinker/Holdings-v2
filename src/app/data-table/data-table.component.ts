@@ -27,7 +27,7 @@ export class DataTableComponent implements AfterViewInit {
     'UnrealizedGainLoss',
     'EffectiveDate'
   ];
-  dataSource = new MatTableDataSource<Holding>(this.holdings);
+  dataSource: any;
 
   constructor(private _liveAnnouncer: LiveAnnouncer) {}
 
