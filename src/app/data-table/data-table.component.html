@@ -1,6 +1,6 @@
 <!-- (matSortChange)="announceSortChange($event)" -->
 <table mat-table [dataSource]="dataSource"  
-       class="mat-elevation-z8">
+       class="mat-elevation-z8" matSort>
 
   <!-- accountName Column -->
   <ng-container matColumnDef="AccountName">
@@ -28,34 +28,34 @@
 
   <!-- quantity Column -->
   <ng-container matColumnDef="Quantity">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by quantity">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by quantity" class="number">
         Quantity
     </th>
-    <td mat-cell *matCellDef="let element"> {{element.Quantity}} </td>
+    <td mat-cell *matCellDef="let element" class="number"> {{element.Quantity | number}} </td>
   </ng-container>
 
   <!-- faceValue Column -->
   <ng-container matColumnDef="FaceValue">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by face value">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by face value" class="number">
         Face Value
     </th>
-    <td mat-cell *matCellDef="let element"> {{element.FaceValue}} </td>
+    <td mat-cell *matCellDef="let element" class="number"> {{element.FaceValue | currency}} </td>
   </ng-container>
 
   <!-- marketValue Column -->
   <ng-container matColumnDef="MarketValue">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by market value">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by market value" class="number">
         Market Value
     </th>
-    <td mat-cell *matCellDef="let element"> {{element.MarketValue}} </td>
+    <td mat-cell *matCellDef="let element" class="number"> {{element.MarketValue | currency}} </td>
   </ng-container>
 
   <!-- unrealizedGainLoss Column -->
   <ng-container matColumnDef="UnrealizedGainLoss">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by unrealized gain / loss">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by unrealized gain / loss" class="number">
         Unrealized Gain/Loss
     </th>
-    <td mat-cell *matCellDef="let element"> {{element.UnrealizedGainLoss}} </td>
+    <td mat-cell *matCellDef="let element" class="number"> {{element.UnrealizedGainLoss | currency}} </td>
   </ng-container>
 
   <!-- effectiveDate Column -->
