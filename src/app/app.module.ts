@@ -1,16 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTableModule } from '@angular/material/table'  
+import { HoldingsListComponent } from './holdings-list/holdings-list.component';
+import { DataTableComponent } from './data-table/data-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HoldingsListComponent,
+    DataTableComponent
   ],
   imports: [
+    AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
-    AppRoutingModule
+    MatTabsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
