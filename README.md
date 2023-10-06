@@ -1,5 +1,7 @@
 # Holdings
 
+`Holdings` is the submission for an interview coding assignment.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
 ## Development server
