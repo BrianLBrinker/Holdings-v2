@@ -26,7 +26,7 @@ export class HoldingsListComponent implements OnInit {
           {label: 'Most recent', content: 'Most recent holdings'},
           {label: 'Archived', content: 'Archived holdings'}
         ]);
-      }, 1500 + 1000 * Math.random()); // Simulate async loading of tab info
+      }, 2000 + 1000 * Math.random()); // Simulate async loading of tab info
     });
   }
 
