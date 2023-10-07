@@ -1,10 +1,4 @@
-<mat-form-field class="filter-box">
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Search columns" #input>
-</mat-form-field>
-
-<table mat-table [dataSource]="dataSource"  
-       class="mat-elevation-z8" matSort>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
   <!-- accountName Column -->
   <ng-container matColumnDef="AccountName">
@@ -73,6 +67,12 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+<mat-form-field class="filter-box">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search columns" #input>
+</mat-form-field>
+
 <mat-paginator
     [pageSizeOptions]="[5, 10, 20]"
     showFirstLastButtons

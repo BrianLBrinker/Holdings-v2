@@ -1,6 +1,4 @@
-import { RawHolding } from '../app/Holding';
-
-export const RAWHOLDINGS: RawHolding[] = [
+[
     {
       "AccountName": "TESTV102",
       "SecurityName": "Baker and Sons",

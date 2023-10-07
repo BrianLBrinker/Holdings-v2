@@ -28,16 +28,17 @@ export class HoldingsListComponent implements OnInit {
           {label: 'Most recent', content: 'Most recent holdings'},
           {label: 'Archived', content: 'Archived holdings'}
         ]);
-      }, 1000);
+      }, 1500 + 1000 * Math.random());
     });
   }
 
   ngOnInit(): void {
-    this.getHoldings();
+    const dataUrl = '../assets/holdings.json';
+    this.getHoldings(dataUrl);
   }
 
-  getHoldings(): void {
-    const rawHoldings: Observable<RawHolding[]> = this.holdingsService.getRawHoldings();
+  getHoldings(dataUrl: string): void {
+    const rawHoldings: Observable<RawHolding[]> = this.holdingsService.getLocalFile(dataUrl);
     const holdings: Observable<Holding[]> = rawHoldings.pipe(
       switchMap(rawHoldingArray => {
           const holdings = rawHoldingArray.map(
@@ -62,6 +63,7 @@ export class HoldingsListComponent implements OnInit {
       const mostRecentDate = holdings
         .map(holding => new Date(holding.EffectiveDate))
         .reduce((mostRecentDate, currentDate) => currentDate > mostRecentDate ? currentDate : mostRecentDate);
+
       this.rencentHoldings = holdings.filter(holding => new Date(holding.EffectiveDate) >= mostRecentDate);
       this.archivedHoldings = holdings.filter(holding => new Date(holding.EffectiveDate) < mostRecentDate);
     });

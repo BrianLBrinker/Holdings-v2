@@ -1,18 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 import { RawHolding } from './Holding';
-import { RAWHOLDINGS } from 'src/assets/holdings';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HoldingsService {
-
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
   
-  getRawHoldings(): Observable<RawHolding[]> {
-    const RawHoldings = of(RAWHOLDINGS);
-    return RawHoldings;
+  getLocalFile(filePath: string): Observable<any> {
+    // return this.http.get(filePath).pipe(
+    //   delay(2000 * Math.random()) // Add a delay of up to 2 seconds
+    // );
+    return this.http.get(filePath);
   }
 }
