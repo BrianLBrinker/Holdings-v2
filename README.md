@@ -6,7 +6,7 @@
 Local `json` is loaded via an http `GET` with a random delay into an `RxJS` observable.  The response observable is then converted to an array, mapped to an `interface` which enforces conversion of the numeric `string` fields to `number` types for sorting, and from which the most recent (greatest) `EffectiveDate` is found.  The most recent date is then used to filter the processed response into two subsets: the most recent holdings, and everything else.
 
 Additional features:
-- Each table has its own filter
+- Each table has its own filter and pagination
 - There is a no-results message for filtering
 - The UI is keyboard accessible via tab/shift-tab and arrow keys
 
