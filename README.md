@@ -12,7 +12,7 @@ Additional features:
 
 The project uses two main components: `holdings-list`, which is the main view and contains the Material tabbed container, and `data-table`, which houses the Material tables.  There is also a service, `holdings`, which gets the local `json`.
 
-Although not used, the Angular http-interceptor pattern could have been used to enforce the desired delay simulation; an `RxJS` delay was used instead for simplicity.
+Although not used, the Angular http-interceptor pattern could have been used to enforce the desired delay simulation; the `RxJS` delay operator was used instead for brevity and simplicity.
 
 Angular Material components are used: `mat-table` tables for each view, including the `mat-paginator`, and the tabbed container to conditionally display either of the two results set tables.  Additional Material components are used for a loading indicator, and a text form/input for filtering the table contents.
 
