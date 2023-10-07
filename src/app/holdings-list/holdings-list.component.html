@@ -9,7 +9,7 @@
         <mat-tab *ngFor="let tab of asyncTabs | async">
             <ng-template mat-tab-label>{{tab.label}}</ng-template>
             <ng-container *ngIf="tab.label.toLowerCase().includes('recent')">
-                <app-data-table [holdings]="rencentHoldings"></app-data-table>
+                <app-data-table [holdings]="recentHoldings"></app-data-table>
             </ng-container>
             <ng-container *ngIf="tab.label.toLowerCase().includes('archived')">
                 <app-data-table [holdings]="archivedHoldings"></app-data-table>
