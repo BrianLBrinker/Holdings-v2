@@ -3,7 +3,7 @@
 `Holdings` is the submission for an interview coding assignment.
 
 ## Design
-Local `json` is loaded via http into an `RxJS` observable.  The response observable is then converted to an array, from which the most recent (greatest) `EffectiveDate` is found.  The most recent date is then used to filter the response into two subsets containing the most recent holdings, and everything else.
+Local `json` is loaded via http into an `RxJS` observable.  The response observable is then converted to an array, mapped to an `interface` which maps the numeric `string` fields to `number` types for sorting, and from which the most recent (greatest) `EffectiveDate` is found.  The most recent date is then used to filter the processed response into two subsets: the most recent holdings, and everything else.
 
 Angular Material components are used: tables for each view, including the `mat-paginator`, and a tabbed container to conditionally display either of the two tables.  Additional Material components are used for a loading indicator, and a text input for filtering the table contents.
 
