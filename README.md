@@ -8,7 +8,7 @@ Local `json` is loaded via an http `GET` with a random delay into an `RxJS` obse
 Additional features:
 - Each table has its own filter
 - The UI is keyboard accessible via tab/shift-tab and arrow keys
-- There is a no-results message for filtering.
+- There is a no-results message for filtering
 
 The project uses two main components: `holdings-list`, which is the main view, and `data-table`, which houses the Material table configuration.  There is also a service, `holdings`, which gets the local `json`.
 
