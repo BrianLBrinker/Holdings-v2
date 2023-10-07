@@ -17,7 +17,7 @@ export class HoldingsListComponent implements OnInit {
   asyncTabs: Observable<Tab[]>;
   recentHoldings: Holding[] = [];
   archivedHoldings: Holding[] = [];
-  dataUrl = '../assets/holdings.json';
+  dataUrl = 'assets/holdings.json';
 
   constructor() {
     this.asyncTabs = new Observable((observer: Observer<Tab[]>) => {
