@@ -30,6 +30,6 @@ Clone to download. Then run `ng serve` for a dev server. Navigate to `http://loc
 
 ## Remote server
 
-Browse to https://brianlbrinker.github.io/Holdings/ to run the app remotely.
+Run the app remotely [here](https://brianlbrinker.github.io/Holdings/).
 
 
