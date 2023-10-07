@@ -16,7 +16,7 @@ Although not used, the Angular http-interceptor pattern could have been used to 
 
 Angular Material components are used: `mat-table` tables for each view, including the `mat-paginator`, and the tabbed container to conditionally display either of the two results set tables.  Additional Material components are used for a loading indicator, and a text form/input for filtering the table contents.
 
-The Angular Material table used was configured to use supported sorting for all columns and pagination.  Filtering is not inherently supported by the Material table, however implementation of a filter on the `datasource` was not difficult.
+The Angular Material table used was configured to use supported sorting for all columns, and pagination.  Filtering is not inherently supported by the Material table, however implementation of a filter on the `datasource` was not difficult.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
