@@ -18,7 +18,7 @@ Additional features:
 
 Simplifications/assumptions:
 - It is assumed that the table data does not change after loading. If changes do occur, the backend should either have a way to communicate that, e. g. via Websockets, or the frontend should poll the backend on some interval.
-- Although not used, the Angular http-interceptor pattern could have been used to enforce the desired delay simulation; the `RxJS` delay operator was used instead for brevity and simplicity.
+- Although not used, the Angular http-interceptor pattern could have been used to enforce the desired delay simulation; the `RxJS` `delay` operator was used instead for brevity and simplicity.
 - Internationalization was not implemented.
 - Currency and number formats are not localized.
 - Normally, such functionality as this would be guarded by user authenication; no attempt was made to implement that here, although route guards would be the preferred method.
