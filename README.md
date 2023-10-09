@@ -23,6 +23,7 @@ Simplifications/assumptions:
 - Currency and number formats are not localized.
 - Normally, such functionality as this would be guarded by user authenication; no attempt was made to implement that here, although route guards would be the preferred method.
 - Table row items/holdings are not clickable, however this could be implemented to facilitate navigation to a detail view for each holding.
+- It is assumed that no proprietary/sensitive data was provided, hence the public access to this repo. Please advise if this is not the case.
 
 Work ongoing:
 - There are two simulated loading times: one for the tab container types, and one for the table data.  The tables cannot be rendered until the tabs are rendered, yet if the tabs are rendered too quickly, the tables are not rendered, which implies a race condition.  Am working on a refactor.
