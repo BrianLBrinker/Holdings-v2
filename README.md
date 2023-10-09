@@ -26,7 +26,6 @@ Simplifications/assumptions:
 - It is assumed that no proprietary/sensitive data was provided, hence the public access to this repo. Please advise if this is not the case.
 
 Work ongoing:
-- There are two simulated loading times: one for the tab container types, and one for the table data.  The tables cannot be rendered until the tabs are rendered, yet if the tabs are rendered too quickly, the tables are not rendered, which implies a race condition.  Am working on a refactor.
 - I am having difficulty getting the test framework to initialize, getting a 'cannot capture browser' error and a timeout. This does not appear to be an issue with Chrome, as some online resources suggest, because configuring Karma to use other browsers yields the same result. Work on this is ongoing.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
