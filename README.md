@@ -20,7 +20,7 @@ Simplifications/assumptions:
 - It is assumed that the table data does not change after loading. If changes do occur, the backend should either have a way to communicate that, e. g. via Websockets, or the frontend should poll the backend on some interval.
 - Although not used, the Angular http-interceptor pattern could have been used to enforce the desired delay simulation; the `RxJS` delay operator was used instead for brevity and simplicity.
 - Normally, we would add internationalization, however that is not added here.
-- Normally, such functionality as this would be guarded by user authenication; no attempt was made to implement that here.
+- Normally, such functionality as this would be guarded by user authenication; no attempt was made to implement that here, although route guards would be the preferred method.
 
 Work ongoing:
 - There are two simulated loading times: one for the tab container types, and one for the table data.  The table data cannot be loaded until the tabs are rendered, yet if the tabs take too long to render, the the table data is not loaded.  Hence, this appears to be a race condition.  I am working on a refactor for the child component to emit an event back to the parent after the table data is loaded; this would signal that it's okay to load the tabs; this will have to occur in a non-circular manner.
