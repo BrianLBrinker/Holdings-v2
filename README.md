@@ -25,17 +25,15 @@ Simplifications/assumptions:
 - Table row items/holdings are not clickable, however this could be implemented to facilitate navigation to a detail view for each holding.
 - It is assumed that no proprietary/sensitive data was provided, hence the public access to this repo. Please advise if this is not the case.
 
-Work ongoing:
-- I am having difficulty getting the test framework to initialize, getting a 'cannot capture browser' error and a timeout. This does not appear to be an issue with Chrome, as some online resources suggest, because configuring Karma to use other browsers yields the same result. Work on this is ongoing.
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
-## Development server
+## Test
+Run `ng test` from the development environment
 
+## Development server
 Clone to download. Then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files. Angular 16 will be required.
 
 ## Remote server
-
 Run the app from GitHub Pages [here](https://brianlbrinker.github.io/Holdings/).
 
 
