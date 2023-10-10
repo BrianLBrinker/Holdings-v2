@@ -11,12 +11,12 @@ Angular Material components are used: `mat-table` tables for each view, includin
 
 The Angular Material table used was configured to use supported sorting for all columns, and pagination.  Filtering is not inherently supported by the Material table, however implementation of a filter on the `datasource` was not difficult.
 
-Additional features:
+### Additional features
 - Each table has its own filter and pagination.
 - There is a no-results message for filtering.
 - The UI is keyboard accessible via tab/shift-tab and arrow keys.
 
-Simplifications/assumptions:
+### Simplifications/assumptions
 - It is assumed that the table data does not change after loading. If changes do occur, the backend should either have a way to communicate that, e. g. via Websockets, or the frontend should poll the backend on some interval.
 - Although not used, the Angular http-interceptor pattern could have been used to enforce the desired delay simulation; the `RxJS` `delay` operator was used instead for brevity and simplicity.
 - Internationalization was not implemented.
