@@ -31,7 +31,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng test` from the development environment
 
 ## Development server
-Clone to download. Then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files. Angular 16 will be required.
+Clone to download. Then run `ng serve` for a dev server. Navigate to `http://localhost:4200/holdings/`. The application will automatically reload if you change any of the source files. Angular 16 will be required.
 
 ## Remote server
 Run the app from GitHub Pages [here](https://brianlbrinker.github.io/Holdings/).
