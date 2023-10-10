@@ -25,4 +25,13 @@ describe('HoldingsListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render tabs', () => {
+    setTimeout(
+      () => {
+        const tabs = fixture.nativeElement.querySelectorAll('.mdc-tab');
+        expect(tabs.length).toBe(2); 
+      }, 3000
+    );
+  });
 });
