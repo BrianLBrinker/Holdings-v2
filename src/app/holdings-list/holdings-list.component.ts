@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { delay, Observable, Observer, of, switchMap } from 'rxjs';
 
+import { BrowserModule } from '@angular/platform-browser';
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatTabsModule } from '@angular/material/tabs';
+
 import { Holding, RawHolding } from '../Holding';
 
 interface Tab {

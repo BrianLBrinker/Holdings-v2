@@ -1,4 +1,9 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { BrowserModule } from '@angular/platform-browser';
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { HoldingsListComponent } from './holdings-list.component';
 
@@ -8,7 +13,9 @@ describe('HoldingsListComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HoldingsListComponent]
+      declarations: [HoldingsListComponent],
+      imports: [BrowserModule, MatProgressSpinnerModule, MatTabsModule],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     });
     fixture = TestBed.createComponent(HoldingsListComponent);
     component = fixture.componentInstance;
