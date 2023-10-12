@@ -1,12 +1,12 @@
 <div id="holdings-list">
-    <ng-container *ngIf="(asyncTabs | async) === null">
+    <ng-container *ngIf="!holdingsLoaded">
         <div class="loading">
             <mat-spinner></mat-spinner>
         </div>
     </ng-container>
 
-    <mat-tab-group>
-        <mat-tab *ngFor="let tab of asyncTabs | async">
+    <mat-tab-group *ngIf="holdingsLoaded">
+        <mat-tab *ngFor="let tab of tabs">
             <ng-template mat-tab-label>{{tab.label}}</ng-template>
             <ng-container *ngIf="tab.label.toLowerCase().includes('recent')">
                 <app-data-table [holdings]="recentHoldings"></app-data-table>
