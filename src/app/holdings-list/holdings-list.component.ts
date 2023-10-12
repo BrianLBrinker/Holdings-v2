@@ -18,21 +18,14 @@ interface Tab {
   styleUrls: ['./holdings-list.component.less']
 })
 export class HoldingsListComponent implements OnInit {
-  asyncTabs: Observable<Tab[]>;
+  tabs: Tab[] = [
+    {label: 'Most recent', content: 'Most recent holdings'},
+    {label: 'Archived', content: 'Archived holdings'}
+  ];
   recentHoldings: Holding[] = [];
   archivedHoldings: Holding[] = [];
   dataUrl = 'assets/holdings.json';
-
-  constructor() {
-    this.asyncTabs = new Observable((observer: Observer<Tab[]>) => {
-      setTimeout(() => {
-        observer.next([
-          {label: 'Most recent', content: 'Most recent holdings'},
-          {label: 'Archived', content: 'Archived holdings'}
-        ]);
-      }, 2000 + 1000 * Math.random()); // Simulate async loading of tab info
-    });
-  }
+  holdingsLoaded = false;
 
   ngOnInit(): void {
     this.getHoldings(this.dataUrl);
@@ -51,7 +44,7 @@ export class HoldingsListComponent implements OnInit {
         })
         .catch(err => observer.error(err))  
     })
-    .pipe(delay(2000 * Math.random()));
+    .pipe(delay(200 + 1800 * Math.random()));
     const holdings: Observable<Holding[]> = rawHoldings.pipe(
       switchMap((rawHoldingArray: any) => {
         const holdings: Holding[] = rawHoldingArray.map(
@@ -82,6 +75,7 @@ export class HoldingsListComponent implements OnInit {
 
       this.recentHoldings = holdingsArray.filter(holding => new Date(holding.EffectiveDate) >= mostRecentDate);
       this.archivedHoldings = holdingsArray.filter(holding => new Date(holding.EffectiveDate) < mostRecentDate);
+      this.holdingsLoaded = true;
     });
   }
 }
